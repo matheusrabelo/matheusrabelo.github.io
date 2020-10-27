@@ -1,0 +1,21 @@
+.header {
+    height: 5rem;
+    font-size: 1.2rem;
+    color: var(--color-dark-green);
+    background-color: var(--color-green);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: var(--box-shadow-default);
+}
+
+.brand {
+    font-size: 1.5rem;
+}
+
+@media (max-width: 480px) {
+    .brand {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+}

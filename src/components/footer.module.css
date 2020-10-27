@@ -1,0 +1,15 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 10vh;
+    font-size: 1.2rem;
+    color: white;
+    background-color: var(--color-grey);
+    box-shadow: var(--box-shadow-default);
+}
+
+.contact {
+    font-size: 1rem;
+}

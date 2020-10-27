@@ -1,0 +1,59 @@
+.project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    height: 12rem;
+    background-color: var(--color-pasta);
+    text-align: center;
+    margin: 1rem;
+    padding: 2rem;
+    transition-property: box-shadow;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in;
+    border-radius: 5px;
+}
+
+.project:hover {
+    box-shadow: 0px 5px 20px 1px rgba(0,0,0,0.45);
+}
+
+.project a {
+    text-decoration: none;
+    color: var(--color-dark-green);
+}
+
+.name {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.description {
+    margin: 1rem 0 1rem 0;
+}
+
+.topics {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topic {
+    white-space: nowrap;
+    border-radius: 1.5rem;
+    background-color: var(--color-dark-green);
+    padding: 0.3rem;
+    margin: 0.2rem;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .project {
+        width: 100%;
+    }
+
+    .topics {
+        flex-direction: column;
+        font-size: 1rem;
+    }
+}

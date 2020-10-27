@@ -1,0 +1,44 @@
+.main {
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 2rem;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+}
+
+.image {
+    width: 15rem;
+    margin: 1rem;
+}
+
+@media (max-width: 600px) {
+    .main {
+        height: 40vh;
+        flex-direction: column;
+    }
+
+    .description {
+        margin: 1rem;
+        margin-top: 0;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .image {
+        width: 8rem;
+    }
+}
