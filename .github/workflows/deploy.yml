@@ -1,0 +1,23 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Deploy to Github pages
+      run: |
+        yarn
+        yarn build
+        git config --global user.email "matheusfreirerabelo@gmail.com"
+        git config --global user.name "Matheus Rabelo"
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/matheusrabelo/matheusrabelo.github.io
+        git add -f public
+        git commit -am "Automated deploy"
+        git subtree split --prefix public -b gh-pages
+        git push -f origin gh-pages
+
+    env:
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN_PUBLIC_ACCESS }}
