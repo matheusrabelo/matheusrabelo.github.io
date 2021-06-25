@@ -1,4 +1,4 @@
-# [mtheusrabelo.github.io/](https://mtheusrabelo.github.io/)
+# [mtheusrabelo.github.io/](https://mtheusrabelo.github.io)
 
 ## About
 
