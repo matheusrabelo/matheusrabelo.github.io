@@ -14,7 +14,7 @@ const SocialMedias = () => {
                     href="https://www.linkedin.com/in/mtheusrabelo"
                     target="_blank"
                     rel="noreferrer"
-                    onClick={sendEvent({
+                    onClick={() => sendEvent({
                         category: 'SocialMedia',
                         action: 'click',
                         label: 'LinkedIn'
@@ -28,7 +28,7 @@ const SocialMedias = () => {
                     href="https://github.com/mtheusrabelo"
                     target="_blank"
                     rel="noreferrer"
-                    onClick={sendEvent({
+                    onClick={() => sendEvent({
                         category: 'SocialMedia',
                         action: 'click',
                         label: 'GitHub'

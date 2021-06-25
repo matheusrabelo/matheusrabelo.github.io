@@ -20,7 +20,7 @@ const Project = ({ name, url, topics, description }) => {
 
     return (
         <div className={styles.project}>
-            <a href={url} target="_blank" rel="noreferrer" onClick={sendEvent(event)}>
+            <a href={url} target="_blank" rel="noreferrer" onClick={() => sendEvent(event)}>
                 <div className={styles.name}>{name}</div>
                 <div className={styles.description}>{description}</div>
                 <div className={styles.topics}>
