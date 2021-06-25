@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useSendEvent } from '../hooks';
 
 import styles from './project.module.css';
 
@@ -9,19 +10,22 @@ Topic.propTypes = {
     name: PropTypes.string.isRequired,
 };
 
-const Project = ({ name, url, topics, description }) => (
-    <div className={styles.project}>
-        <a href={url} target="_blank" rel="noreferrer">
-            <div className={styles.name}>{name}</div>
-            <div className={styles.description}>{description}</div>
-            <div className={styles.topics}>
-                {topics.map((topic, i) => (
-                    <Topic name={topic} key={i} />
-                ))}
-            </div>
-        </a>
-    </div>
-);
+const Project = ({ name, url, topics, description }) => {
+    const send = useSendEvent('Project', 'View', url);
+    return (
+        <div className={styles.project}>
+            <a href={url} target="_blank" rel="noreferrer" onClick={send}>
+                <div className={styles.name}>{name}</div>
+                <div className={styles.description}>{description}</div>
+                <div className={styles.topics}>
+                    {topics.map((topic, i) => (
+                        <Topic name={topic} key={i} />
+                    ))}
+                </div>
+            </a>
+        </div>
+    );
+}
 
 Project.propTypes = {
     name: PropTypes.string.isRequired,
