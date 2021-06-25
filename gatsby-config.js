@@ -18,6 +18,12 @@ module.exports = {
                 },
             },
         },
+        {
+            resolve: `gatsby-plugin-gtag`,
+            options: {
+                trackingId: `UA-67146199-1`,
+            }
+        },
         `gatsby-plugin-react-helmet`,
         {
             resolve: `gatsby-source-filesystem`,
