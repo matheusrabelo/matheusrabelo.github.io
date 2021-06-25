@@ -12,15 +12,15 @@ Topic.propTypes = {
 
 const Project = ({ name, url, topics, description }) => {
     const sendEvent = useSendEvent();
-    const sendProjectEvent = () => sendEvent({
+    const event = {
         category: 'Project',
-        action: 'view',
+        action: 'click',
         label: url
-    });
+    };
 
     return (
         <div className={styles.project}>
-            <a href={url} target="_blank" rel="noreferrer" onClick={sendProjectEvent}>
+            <a href={url} target="_blank" rel="noreferrer" onClick={sendEvent(event)}>
                 <div className={styles.name}>{name}</div>
                 <div className={styles.description}>{description}</div>
                 <div className={styles.topics}>

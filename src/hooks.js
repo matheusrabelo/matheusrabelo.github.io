@@ -12,5 +12,5 @@ export const useSendEvent = () => {
     });
   };
 
-  return () => (...args) => console.log(JSON.stringify(args));
+  return (...args) => console.log(JSON.stringify(args));
 };
