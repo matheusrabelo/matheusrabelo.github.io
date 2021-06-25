@@ -7,7 +7,7 @@ const SocialMedias = () => (
     <div className={styles.socialMedias}>
         <div className={classnames(styles.socialMedia, styles.linkedinIcon)}>
             <a
-                href="https://www.linkedin.com/in/matheusrabelo"
+                href="https://www.linkedin.com/in/mtheusrabelo"
                 target="_blank"
                 rel="noreferrer"
             >
@@ -16,7 +16,7 @@ const SocialMedias = () => (
         </div>
         <div className={classnames(styles.socialMedia, styles.githubIcon)}>
             <a
-                href="https://github.com/matheusrabelo"
+                href="https://github.com/mtheusrabelo"
                 target="_blank"
                 rel="noreferrer"
             >

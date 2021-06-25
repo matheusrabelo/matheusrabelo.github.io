@@ -1,5 +1,5 @@
 {
-  "name": "matheusrabelo.github.io",
+  "name": "mtheusrabelo.github.io",
   "private": true,
   "description": "Personal website",
   "version": "1.0.0",
@@ -41,9 +41,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/matheusrabelo/matheusrabelo.github.io"
+    "url": "https://github.com/mtheusrabelo/mtheusrabelo.github.io"
   },
   "bugs": {
-    "url": "https://github.com/matheusrabelo/matheusrabelo.github.io/issues"
+    "url": "https://github.com/mtheusrabelo/mtheusrabelo.github.io/issues"
   }
 }

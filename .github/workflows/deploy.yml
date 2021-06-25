@@ -13,7 +13,7 @@ jobs:
         yarn build
         git config --global user.email "matheusfreirerabelo@gmail.com"
         git config --global user.name "Matheus Rabelo"
-        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/matheusrabelo/matheusrabelo.github.io
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/mtheusrabelo/mtheusrabelo.github.io
         git add -f public
         git commit -am "Automated deploy"
         git subtree split --prefix public -b gh-pages

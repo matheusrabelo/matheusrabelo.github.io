@@ -6,7 +6,7 @@ module.exports = {
     siteMetadata: {
         title: 'Matheus Rabelo',
         description: 'Personal website',
-        author: '@matheusrabelo',
+        author: '@mtheusrabelo',
         email: 'matheusfreirerabelo[@]gmail[.]com',
     },
     plugins: [
@@ -23,8 +23,8 @@ module.exports = {
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: `matheusrabelo.github.io`,
-                short_name: `matheusrabelo`,
+                name: `mtheusrabelo.github.io`,
+                short_name: `mtheusrabelo`,
                 start_url: `/`,
                 background_color: `#663399`,
                 theme_color: `#663399`,

@@ -1,4 +1,4 @@
-CONTAINER_NAME=matheusrabelo
+CONTAINER_NAME=mtheusrabelo
 PWD=$(shell pwd)
 APPDIR=/app
 PORT=8000
