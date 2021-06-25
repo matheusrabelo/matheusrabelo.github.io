@@ -8,6 +8,16 @@ module.exports = {
         email: 'matheusfreirerabelo[@]gmail[.]com',
     },
     plugins: [
+        {
+            resolve: `gatsby-plugin-google-tagmanager`,
+            options: {
+                id: `GTM-K8ZN59C`,
+                includeInDevelopment: true,
+                defaultDataLayer: {
+                    platform: `gatsby`
+                },
+            },
+        },
         `gatsby-plugin-react-helmet`,
         {
             resolve: `gatsby-source-filesystem`,
@@ -39,17 +49,6 @@ module.exports = {
                 headers: {
                     Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
                 },
-            },
-        },
-        {
-            resolve: `gatsby-plugin-google-tagmanager`,
-            options: {
-                id: `GTM-K8ZN59C`,
-                includeInDevelopment: true,
-                defaultDataLayer: {
-                    platform: `gatsby`
-                },
-                enableWebVitalsTracking: true,
             },
         },
     ],
