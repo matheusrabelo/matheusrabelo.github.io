@@ -982,6 +982,13 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
+"@babel/runtime@^7.14.0":
+  version "7.14.6"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.14.6.tgz#535203bc0892efc7dec60bdc27b2ecf6e409062d"
+  integrity sha512-/PCB2uJ7oM44tz8YhC4Z/6PeOKXp4K588f+5M3clr1M4zbqztlo0XEfJ2LEzj/FgwfgGcIdl8n7YYjTCI0BYwg==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/standalone@^7.11.6":
   version "7.12.4"
   resolved "https://registry.yarnpkg.com/@babel/standalone/-/standalone-7.12.4.tgz#1493960e765308cc06e9a75ba1affbe65a11124b"
@@ -6707,10 +6714,13 @@ gatsby-page-utils@^0.2.28:
     lodash "^4.17.20"
     micromatch "^4.0.2"
 
-gatsby-plugin-gtag@^1.0.13:
-  version "1.0.13"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-gtag/-/gatsby-plugin-gtag-1.0.13.tgz#ffa08a728ba1cfe33090e52764d014a025a5d35a"
-  integrity sha512-Oul6O67klajrEjkkF1diD228SmyUWsAwTq/1tYq41vBwmyNiPk4dhk8K93rrNQ5d5zesSv+awBeGBa503tQqGw==
+gatsby-plugin-google-tagmanager@^3.8.0:
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-tagmanager/-/gatsby-plugin-google-tagmanager-3.8.0.tgz#afe46281b41cbe012a7a9b584a6aa0efd9bc55c4"
+  integrity sha512-K9LNRapSBZ8+SoadzfWpsJV+Kl15LQHZtwkGDFUv8rP5vya7rNEw+tsevLVfU7pgkZkYqkFnpEPJC95n55PU4g==
+  dependencies:
+    "@babel/runtime" "^7.14.0"
+    web-vitals "^1.1.2"
 
 gatsby-plugin-manifest@^2.4.34:
   version "2.4.35"
@@ -14565,6 +14575,11 @@ web-namespaces@^1.0.0:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/web-namespaces/-/web-namespaces-1.1.4.tgz#bc98a3de60dadd7faefc403d1076d529f5e030ec"
   integrity sha512-wYxSGajtmoP4WxfejAPIr4l0fVh+jeMXZb08wNc0tMg6xsfZXj3cECqIK0G7ZAqUq0PP8WlMDtaOGVBTAWztNw==
+
+web-vitals@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/web-vitals/-/web-vitals-1.1.2.tgz#06535308168986096239aa84716e68b4c6ae6d1c"
+  integrity sha512-PFMKIY+bRSXlMxVAQ+m2aw9c/ioUYfDgrYot0YUa+/xa0sakubWhSDyxAKwzymvXVdF4CZI71g06W+mqhzu6ig==
 
 webpack-dev-middleware@^3.7.2:
   version "3.7.2"

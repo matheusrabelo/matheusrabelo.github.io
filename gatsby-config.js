@@ -44,9 +44,12 @@ module.exports = {
             },
         },
         {
-            resolve: `gatsby-plugin-gtag`,
+            resolve: `gatsby-plugin-google-tagmanager`,
             options: {
-                trackingId: `UA-96217823-1`,
+                id: "GTM-K8ZN59C",
+                includeInDevelopment: true,
+                defaultDataLayer: { platform: "gatsby" },
+                enableWebVitalsTracking: true,
             },
         },
     ],
