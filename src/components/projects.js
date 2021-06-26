@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import styles from './projects.module.css';
 import Project from './project';
+import { useAB } from '../hooks';
 
 const Projects = () => {
     const data = useStaticQuery(graphql`
@@ -34,7 +35,7 @@ const Projects = () => {
     `);
 
     const repositories = data?.github?.viewer?.repositories?.nodes || [];
-    const projects = repositories.map(
+    let projects = repositories.map(
         ({ name, url, repositoryTopics, shortDescriptionHTML }) => ({
             name,
             url,
@@ -44,6 +45,11 @@ const Projects = () => {
             }),
         })
     );
+
+    const backwards = useAB('backwards');
+    if (backwards) {
+        projects = projects.reverse();
+    }
 
     return (
         <section className={styles.section}>

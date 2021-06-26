@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 const log = (...args) => console.log(JSON.stringify(args));
 
 export const useSendEvent = () => ({ category, action, label }) => {
@@ -8,4 +10,14 @@ export const useSendEvent = () => ({ category, action, label }) => {
     eventAction: action,
     eventLabel: label
   });
+};
+
+export const useAB = (experiment) => {
+  const [variant, setVariant] = useState(null);
+
+  useEffect(() => {
+    setVariant(window?.ab[experiment]);
+  }, [experiment, window?.ab[experiment]]);
+
+  return variant;
 };
