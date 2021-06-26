@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 const log = (...args) => console.log(JSON.stringify(args));
 
@@ -14,12 +14,19 @@ export const useSendEvent = () => ({ category, action, label }) => {
 
 export const useAB = (experiment) => {
   const [variant, setVariant] = useState(null);
+  const variantName = `ab_${experiment}`;
+
+  const handleVariant = useCallback(() => {
+    setVariant(experiment);
+  }, [experiment]);
 
   useEffect(() => {
-    if (typeof window !== 'undefined' && window.ab) {
-      setVariant(window?.ab[experiment]);
-    }
-  }, [experiment, typeof window !== 'undefined' && window.ab]);
+    window.addEventListener(variantName, handleVariant);
+
+    return () => {
+      window.removeEventListener(variantName, handleVariant);
+    };
+  }, [variantName, handleVariant]);
 
   return variant;
 };
