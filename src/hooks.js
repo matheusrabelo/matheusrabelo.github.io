@@ -16,8 +16,10 @@ export const useAB = (experiment) => {
   const [variant, setVariant] = useState(null);
 
   useEffect(() => {
-    setVariant(window?.ab[experiment]);
-  }, [experiment, window?.ab[experiment]]);
+    if (typeof window !== 'undefined' && window.ab) {
+      setVariant(window?.ab[experiment]);
+    }
+  }, [experiment, typeof window !== 'undefined' && window.ab]);
 
   return variant;
 };
