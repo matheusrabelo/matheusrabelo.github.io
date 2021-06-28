@@ -14,19 +14,36 @@ export const useSendEvent = () => ({ category, action, label }) => {
 
 export const useAB = (experiment) => {
   const [variant, setVariant] = useState(null);
-  const variantName = `ab_${experiment}`;
 
   const handleVariant = useCallback(() => {
-    setVariant(experiment);
+    setVariant(true);
   }, [experiment]);
 
   useEffect(() => {
-    window.addEventListener(variantName, handleVariant);
+    window.addEventListener(experiment, handleVariant);
 
     return () => {
-      window.removeEventListener(variantName, handleVariant);
+      window.removeEventListener(experiment, handleVariant);
     };
-  }, [variantName, handleVariant]);
+  }, [experiment, handleVariant]);
+
+  return variant;
+};
+
+export const useMultiVariant = (experiment) => {
+  const [variant, setVariant] = useState(null);
+
+  const handleMultiVariant = useCallback((event) => {
+    setVariant(event.detail());
+  });
+
+  useEffect(() => {
+    window.addEventListener(experiment, handleMultiVariant);
+
+    return () => {
+      window.removeEventListener(experiment, handleMultiVariant);
+    };
+  }, [experiment, handleMultiVariant]);
 
   return variant;
 };
